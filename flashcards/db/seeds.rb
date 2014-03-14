@@ -1,5 +1,5 @@
 Deck.create( title: "U.S. Capitals")
-Card.create( question: "California", answer: "Sacremento", deck_id: 1)
+Card.create( question: "California", answer: "Sacramento", deck_id: 1)
 Card.create( question: "Virginia", answer: "Richmond", deck_id: 1)
 Card.create( question: "Tunnel", answer: "Secret", deck_id: 1)
 
