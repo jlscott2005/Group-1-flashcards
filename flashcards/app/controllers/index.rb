@@ -26,6 +26,9 @@ post '/decks/:deck_id/:card' do
     @msg = "CORRECT!"
     @card_id = params[:card].to_i + 1
     @card = @deck[@card_id]
+    if @card_id >= @deck.length
+      return erb :stat
+    end
   else
     @msg = "Sorry, try again."
     @card_id = params[:card].to_i
