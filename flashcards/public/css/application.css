@@ -12,3 +12,11 @@ th {
   width: 600px;
   margin: 20px auto;
 }
+
+#signup input {
+  display: block;
+}
+
+#login input {
+  display: block;
+}
