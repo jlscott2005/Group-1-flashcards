@@ -40,3 +40,7 @@ get '/stat' do
   erb :stat
 end
 
+not_found do
+  erb :error
+end
+
