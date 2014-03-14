@@ -14,6 +14,3 @@ end
 
 run Sinatra::Application
 
-Configure do
-  set:method_override, true
-end
