@@ -4,6 +4,7 @@ end
 
 get '/decks' do
   @decks = Deck.all
+  @decks
   erb :decks
 end
 

@@ -13,4 +13,3 @@ configure do
 end
 
 run Sinatra::Application
-Finished decks page
