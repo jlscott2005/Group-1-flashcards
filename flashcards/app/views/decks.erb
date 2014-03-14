@@ -5,6 +5,6 @@
 <div class = "container">
   <h3>Here are your available decks:</h3>
     <% @decks.each do |deck| %>
-      <h4><a href='/'><%= deck.title%></a></h4>
+      <h4><a href="/decks/<%= deck.id%>/0"><%= deck.title%></a></h4>
     <% end %>
 </div>
