@@ -1,9 +1,10 @@
 <div class = "header">
   <h1>Tunnel to Knowledge</h1>
 </div>
+
 <div class = "container">
-
-
-
-
+  <h3>Here are your available decks:</h3>
+    <% @decks.each do |deck| %>
+      <h4><a href='/'><%= deck.title%></a></h4>
+    <% end %>
 </div>

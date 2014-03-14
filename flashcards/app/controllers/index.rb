@@ -2,6 +2,11 @@ get '/' do
   erb  :decks
 end
 
+get '/decks' do
+  @decks = Deck.all
+  erb :decks
+end
+
 get '/decks/:deck_id/:card' do
   @deck = Deck.find(params[:deck_id]).cards
   @card = @deck[params[:card].to_i]
@@ -17,3 +22,8 @@ post '/decks/:deck_id/:card' do
   @card_id = params[:card].to_i + 1
   erb :card
 end
+
+get '/stat' do
+  erb :stat
+end
+
