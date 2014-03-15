@@ -1,5 +1,4 @@
 get '/' do
-  redirect '/decks'
   erb :index
 end
 
@@ -15,10 +14,15 @@ end
 
 post '/' do
   if params[:email]
-    User.create(user_name: params[:user_name], email: params[:email], password: params[:password], password_comfirmation: params[:password_confirmation])
+    new_user = User.create(user_name: params[:user_name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   end
-
-  redirect '/decks'
+  p User.find_by(user_name: params[:user_name])
+  user = User.authenticate(params[:user_name], params[:password])
+  if user
+    redirect '/decks'
+  else
+    redirect '/'
+  end
 end
 
 get '/decks/:deck_id/:card' do
