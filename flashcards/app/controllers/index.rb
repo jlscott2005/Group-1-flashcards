@@ -1,5 +1,5 @@
 get '/' do
-  erb  :decks
+  redirect '/decks'
 end
 
 get '/decks' do
@@ -29,6 +29,7 @@ post '/decks/:deck_id/:card'  do
     @card_id = params['card'].to_i + 1
     @card = @deck[@card_id]
     if @card_id >= @deck.length
+      @msg = "done"
     end
   else
     @msg = "Sorry, try again."

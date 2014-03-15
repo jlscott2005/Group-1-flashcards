@@ -18,12 +18,19 @@ $(document).ready(function() {
       var url = '/decks/' + deckID(result) + '/' + cardID(result);
       $.post(url, result, function(response) {
         $('#msg').text(response);
-        setTimeout(function () {
-           newCard = parseInt(cardID(result)) + 1
-           var url = '/decks/' + deckID(result) + '/' + newCard;
-           console.log(url)
-           window.location.href = url
-        }, 2000);
+
+        if ($('#msg').text() == "CORRECT!")
+        {
+          setTimeout(function () {
+            newCard = parseInt(cardID(result)) + 1
+            var url = '/decks/' + deckID(result) + '/' + newCard;
+            window.location.href = url;
+          },2000);
+         }
+        else if ($('#msg').text() == 'done')
+        {
+          window.location.href = '/stat';
+        }
       });
   });
 
