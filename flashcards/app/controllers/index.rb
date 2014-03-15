@@ -5,8 +5,20 @@ end
 
 get '/decks' do
   @decks = Deck.all
-  @decks
   erb :decks
+end
+
+post '/decks' do
+  @decks =Deck.all
+  erb :decks
+end
+
+post '/' do
+  if params[:email]
+    User.create(user_name: params[:user_name], email: params[:email], password: params[:password], password_comfirmation: params[:password_confirmation])
+  end
+
+  redirect '/decks'
 end
 
 get '/decks/:deck_id/:card' do

@@ -18,8 +18,9 @@ th {
   text-align: center;
 }
 
-.content {
+.content > * {
   text-align: center;
+  vertical-align: top;
 }
 
 #signup input {

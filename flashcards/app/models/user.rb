@@ -3,4 +3,14 @@ class User < ActiveRecord::Base
   validates  :user_name, presence: true, uniqueness: true
   validates  :email, presence: true, uniqueness: true
   # Remember to create a migration!
+
+  def self.authenticate(user_name, password)
+    user = self.find_by(user_name: user_name)
+    if user_name && user.password == password
+      true
+    else
+      false
+    end
+  end
+
 end
