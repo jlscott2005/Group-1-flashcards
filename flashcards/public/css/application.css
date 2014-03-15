@@ -4,6 +4,7 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
 th {
 
 }
@@ -11,4 +12,37 @@ th {
 .header{
   width: 600px;
   margin: 20px auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.content > * {
+  text-align: center;
+  vertical-align: top;
+}
+
+#signup input {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+}
+
+#login input {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+}
+
+div #signup {
+  display: inline-block;
+  border-left: 1px solid black;
+  padding: 50px;
+
+}
+
+div #login {
+  display: inline-block;
+  padding: 50px;
 }
